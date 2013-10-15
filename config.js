@@ -17,7 +17,7 @@ config = {
         },
         server: {
             // Host to be passed to node's `net.Server#listen()`
-            // host: '127.0.0.1',
+             host: 'localhost',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
             port: '5000'
         }
@@ -38,7 +38,7 @@ config = {
         },
         server: {
             // Host to be passed to node's `net.Server#listen()`
-            //host: '127.0.0.1',
+            host: 'localhost',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
             port: '5000'
         }
@@ -58,7 +58,7 @@ config = {
             }
         },
         server: {
-            //host: '127.0.0.1',
+            host: 'localhost',
             port: '5000'
         }
     },
@@ -66,7 +66,7 @@ config = {
     // ### Travis
     // Automated testing run through Github
     travis: {
-        //url: 'http://127.0.0.1:5000',
+        url: 'http://127.0.0.1:5000',
         database: {
             client: 'sqlite3',
             connection: {
@@ -74,7 +74,7 @@ config = {
             }
         },
         server: {
-            //host: '127.0.0.1',
+            host: '127.0.0.1',
             port: '5000'
         }
     }
