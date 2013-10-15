@@ -5,26 +5,9 @@ var path = require('path'),
     config;
 
 config = {
-    // ### Development **(default)**
     development: {
         // The url to use when providing links to the site, E.g. in RSS and email.
         url: 'http://localhost',
-
-        // Example mail config
-        // Visit http://docs.ghost.org/mail for instructions
-        // ```
-        //  mail: {
-        //      transport: 'SMTP',
-        //      options: {
-        //          service: 'Mailgun',
-        //          auth: {
-        //              user: '', // mailgun username
-        //              pass: ''  // mailgun password
-        //          }
-        //      }
-        //  },
-        // ```
-
         database: {
             client: 'sqlite3',
             connection: {
@@ -34,7 +17,7 @@ config = {
         },
         server: {
             // Host to be passed to node's `net.Server#listen()`
-            host: '127.0.0.1',
+            // host: '127.0.0.1',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
             port: '5000'
         }
@@ -55,7 +38,7 @@ config = {
         },
         server: {
             // Host to be passed to node's `net.Server#listen()`
-            host: '127.0.0.1',
+            //host: '127.0.0.1',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
             port: '5000'
         }
@@ -67,7 +50,7 @@ config = {
     // Used when developing Ghost to run tests and check the health of Ghost
     // Uses a different port number
     testing: {
-        url: 'http://localhost:5002',
+        url: 'http://localhost:5000',
         database: {
             client: 'sqlite3',
             connection: {
@@ -75,7 +58,7 @@ config = {
             }
         },
         server: {
-            host: '127.0.0.1',
+            //host: '127.0.0.1',
             port: '5000'
         }
     },
@@ -83,7 +66,7 @@ config = {
     // ### Travis
     // Automated testing run through Github
     travis: {
-        url: 'http://127.0.0.1:5001',
+        //url: 'http://127.0.0.1:5000',
         database: {
             client: 'sqlite3',
             connection: {
@@ -91,7 +74,7 @@ config = {
             }
         },
         server: {
-            host: '127.0.0.1',
+            //host: '127.0.0.1',
             port: '5000'
         }
     }

@@ -126,14 +126,6 @@ var path           = require('path'),
                 }
             },
 
-            // Open the site in a browser
-            open: {
-                server: {
-                    // TODO: Load this port from config?
-                    path: 'http://127.0.0.1:5000'
-                }
-            },
-
             // JSLint all the things!
             jslint: {
                 server: {
