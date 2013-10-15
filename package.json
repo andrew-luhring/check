@@ -5,7 +5,7 @@
     "scripts": {
         "start": "node index",
         "test": "grunt validate --verbose",
-        "postinstall": "./node_modules/.bin/grunt --gruntfile /Gruntfile.js dev"
+        "postinstall": "/node_modules/.bin/grunt --gruntfile /Gruntfile.js dev"
     },
     "engines": {
         "node": ">=0.10.* <0.11.4"
