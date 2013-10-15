@@ -67,7 +67,7 @@
       <file leaf-file-name="package.json" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="10" selection-start="169" selection-end="169" vertical-scroll-proportion="0.22008114">
+            <state line="6" column="42" selection-start="158" selection-end="158" vertical-scroll-proportion="0.18864097">
               <folding />
             </state>
           </provider>
@@ -351,7 +351,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="10" selection-start="169" selection-end="169" vertical-scroll-proportion="0.22008114">
+        <state line="6" column="42" selection-start="158" selection-end="158" vertical-scroll-proportion="0.18864097">
           <folding />
         </state>
       </provider>
