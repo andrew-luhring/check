@@ -886,6 +886,8 @@ var path           = require('path'),
 
         // When you just say 'grunt'
         grunt.registerTask('default', ['sass:admin', 'handlebars', 'concat']);
+
+        grunt.registerTask('heroku:development',  [ 'default', 'express:dev', 'open',  'watch']);
     };
 
 //    myGrunts = function(grunt){

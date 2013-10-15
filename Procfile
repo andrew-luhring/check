@@ -1,1 +1,1 @@
-web: ./node_modules/.bin/grunt --gruntfile /Gruntfile.js dev
+web: node index.js
