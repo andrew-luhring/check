@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="compress_test_files">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/node_modules/grunt-contrib-compress/test/expected/compress_test_files.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
