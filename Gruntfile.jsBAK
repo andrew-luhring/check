@@ -60,16 +60,12 @@ var path           = require('path'),
             // Watch files and livereload in the browser during development
             watch: {
                 handlebars: {
-                    files: ['core/client/tpl/**/*.hbs', 'content/themes/swag/**/*.hbs', 'content/themes/swag/*.hbs'],
+                    files: ['core/client/tpl/**/*.hbs'],
                     tasks: ['handlebars']
                 },
                 sass: {
                     files: ['<%= paths.adminAssets %>/sass/**/*'],
                     tasks: ['sass:admin']
-                },
-                scss: {
-                    files: ['content/themes/swag/assets/sass/*.scss', 'content/themes/swag/assets/sass/partials/*.scss'],
-                    tasks: ['sass:dist']
                 },
                 concat: {
                     files: [
@@ -84,10 +80,9 @@ var path           = require('path'),
                 livereload: {
                     files: [
                         // Theme CSS
-                        'content/themes/*/css/*.css',
-                        'content/themes/*/assets/css/*.css',
+                        'content/themes/casper/css/*.css',
                         // Theme JS
-                        'content/themes/*/js/*.js',
+                        'content/themes/casper/js/*.js',
                         // Admin CSS
                         '<%= paths.adminAssets %>/css/*.css',
                         // Admin JS
@@ -130,7 +125,7 @@ var path           = require('path'),
             open: {
                 server: {
                     // TODO: Load this port from config?
-                    path: 'http://127.0.0.1:5000'
+                    path: 'http://127.0.0.1:2368'
                 }
             },
 
@@ -173,13 +168,10 @@ var path           = require('path'),
                         unparam: true
                     },
                     files: {
-                        src: [
-                            'core/client/**/*.js',
-                            'content/themes/swag/assets/js/*.js'
-                        ]
+                        src: 'core/client/**/*.js'
                     },
                     exclude: [
-			            'core/client/assets/**/*.js',
+                        'core/client/assets/**/*.js',
                         'core/client/tpl/**/*.js'
                     ]
                 },
@@ -253,20 +245,8 @@ var path           = require('path'),
                     files: {
                         '<%= paths.adminAssets %>/css/screen.css': '<%= paths.adminAssets %>/sass/screen.scss'
                     }
-                },
-                dist: {
-                    files: {
-                        'content/themes/swag/assets/css/blog.css': 'content/themes/swag/assets/sass/blog.scss'
-                    },
-                    options: {
-                        style: 'expanded',
-                        scss: 'true',
-                        sourcemap: 'true',
-                        quiet: 'true'
-                    }
                 }
             },
-
 
             shell: {
                 bourbon: {
@@ -527,7 +507,7 @@ var path           = require('path'),
         grunt.registerTask('spawn-casperjs', function () {
             var done = this.async(),
                 options = ['host', 'noPort', 'port', 'email', 'password'],
-                args = ['test', 'admin/', 'frontend/', '--includes=base.js', '--direct', '--log-level=debug', '--port=5000'];
+                args = ['test', 'admin/', 'frontend/', '--includes=base.js', '--direct', '--log-level=debug', '--port=2369'];
 
             // Forward parameters from grunt to casperjs
             _.each(options, function processOption(option) {
@@ -888,13 +868,4 @@ var path           = require('path'),
         grunt.registerTask('default', ['sass:admin', 'handlebars', 'concat']);
     };
 
-//    myGrunts = function(grunt){
-//        scss: {
-//            files: ['content/themes/swag/assets/sass/*.scss', 'content/themes/swag/assets/sass/**/*.scss' ]
-//
-//        }
-//    }
-
 module.exports = configureGrunt;
-
-
